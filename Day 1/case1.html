@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+function distributeLemons(n) {
+  let groupSize = 7; 
+  let G1 = Math.min(n, groupSize);
+  n -= G1;
+  let G2 = Math.min(n, groupSize);
+  n -= G2;
+  let G3 = Math.min(n, groupSize);
+  n -= G3;
+  console.log(G1: ${G1} lemons);
+  console.log(G2: ${G2} lemons);
+  console.log(G3: ${G3} lemons);
+  if (n < 0) {
+    console.log(Shortage: ${Math.abs(n)});
+  } else if (n === 0) {
+    console.log("Sufficient lemons");
+  } else {
+    console.log(Excess: ${n});
+  }
+}
+let input = parseInt(prompt("Enter the number of lemons:"), 10);
+  distributeLemons(input);
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+
+<html>
+<body>
+<script>
+function Lemons(n) 
+{
+let groupSize = 7; 
+let G1 = 0, G2 = 0, G3 = 0; 
+if (n >= groupSize) {
+G1 = groupSize;
+n -= groupSize;
+} else {
+G1 = n;
+n = 0;
+}
+
+if (n >= groupSize) {
+G2 = groupSize;
+n -= groupSize;
+} else {
+G2 = n;
+n = 0;
+}
+
+  
+if (n >= groupSize) {
+G3 = groupSize;
+n -= groupSize;
+} else {
+G3 = n;
+n = 0;
+}
+console.log(`G1: ${G1} lemons`);
+console.log(`G2: ${G2} lemons`);
+console.log(`G3: ${G3} lemons`);
+
+if (G1 === groupSize && G2 === groupSize && G3 === groupSize) {
+console.log("Sufficient lemons: All gods are satisfied.");
+} else if (n === 0) {
+console.log(`Shortage: ${groupSize * 3 - (G1 + G2 + G3)} lemons needed.`);
+} else {
+console.log(`Excess: ${n} lemons left after offering.`);
+  }
+}
+
+let input = parseInt(prompt("Enter the number of lemons:"), 10);
+Lemons(input);
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect and Even Prime Numbers Extractor</title>
+</head>
+<body>
+    <h1>Perfect and Even Prime Numbers Extractor</h1>   
+    <p>Enter the size of the array:</p>
+    <input type="number" id="size" placeholder="Array Size">
+    <br><br>
+    <p>Enter the elements of the array (separated by commas):</p>
+    <input type="text" id="elements" placeholder="Array Elements">
+    <br><br>
+    <button onclick="extractNumbers()">Extract Perfect and Even Prime Numbers</button>   
+    <p id="result"></p>   
+    <script>       
+        function isPrime(num) {
+            if (num <= 1) return false;
+            if (num === 2) return true;
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) return false;
+            }
+            return true;
+        }
+        function isPerfect(num) {
+            let sum = 0;
+            for (let i = 1; i <= num / 2; i++) {
+                if (num % i === 0) sum += i;
+            }
+            return sum === num;
+        }      
+        function extractNumbers() {
+            let size = parseInt(document.getElementById('size').value);
+            let elements = document.getElementById('elements').value.split(',').map(num => parseInt(num.trim()));
+            if (elements.length !== size) {
+                document.getElementById('result').innerText = "The number of elements does not match the array size.";
+                return;
+            }
+            let perfectNumbers = [];
+            let evenPrimeNumbers = [];
+            for (let i = 0; i < size; i++) {
+                let num = elements[i];      
+                if (isPerfect(num)) {
+                    perfectNumbers.push(num);
+                }   
+                if (num === 2) {
+                    evenPrimeNumbers.push(num);
+                } else if (num > 2 && num % 2 === 0 && isPrime(num)) {
+                    evenPrimeNumbers.push(num);
+                }
+            }
+            document.getElementById('result').innerHTML = `
+                Perfect Numbers: ${perfectNumbers.length > 0 ? perfectNumbers.join(', ') : 'None found'}<br>
+                Even Prime Numbers: ${evenPrimeNumbers.length > 0 ? evenPrimeNumbers.join(', ') : 'None found'}
+            `;
+        }
+    </script>
+</body>
+</html>
