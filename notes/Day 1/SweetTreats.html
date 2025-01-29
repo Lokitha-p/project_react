@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Treats Bakery</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('bakery-background.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-attachment: fixed;
+            color: #333;
+        }
+        header {
+            background-color: rgba(255, 204, 153, 0.9);
+            text-align: center;
+            padding: 2rem 1rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            color: #663300;
+        }
+        header p {
+            font-style: italic;
+            color: #804000;
+        }
+        nav {
+            background-color: #ff9966;
+            padding: 0.5rem;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+        nav a:hover {
+            color: #333;
+        }
+        main {
+            padding: 1.5rem;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 1rem auto;
+            width: 90%;
+            max-width: 1200px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        .menu-item {
+            margin-bottom: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .menu-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+        .menu-item img {
+            width: 250px;
+            height: auto;
+            display: block;
+            margin: 0.5rem auto;
+            border-radius: 10px;
+        }
+        footer {
+            background-color: rgba(255, 204, 153, 0.9);
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sweet Treats Bakery</h1>
+        <p>Delighting taste buds since 1995</p>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about-us">About Us</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact-us">Contact Us</a>
+    </nav>
+    <main>
+        <section id="about-us">
+            <h2>About Us</h2>
+            <p>Welcome to Sweet Treats, where every bite is a taste of happiness. From classic pastries to modern baked delights, our family-run bakery has been crafting smiles for over two decades!</p>
+        </section>
+        <section id="menu">
+            <h2>Our Menu</h2>
+            <div class="menu-item">
+                <h3>Chocolate Fudge Cake</h3>
+                <img src="https://www.janespatisserie.com/wp-content/uploads/2015/08/IMG_2203_1-1-scaled.jpg" alt="Chocolate Fudge Cake">
+                <p>A rich, moist chocolate cake topped with creamy chocolate ganache.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Blueberry Muffins</h3>
+                <img src="https://kickassbaker.com/wp-content/uploads/2023/05/jumbo-blueberry-muffins-with-sour-cream-1x1-1.jpg" alt="Blueberry Muffins">
+                <p>Freshly baked muffins bursting with juicy blueberries.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Classic Sourdough Bread</h3>
+                <img src="https://www.bhg.com/thmb/BI9KeACuU1N_UgVJMf2LqM09JOo=/1080x0/filters:no_upscale():strip_icc()/RU314184-b7e328a6e6cf4e14a5f625543b58f609.jpg" alt="Classic Sourdough Bread">
+                <p>Perfectly crusty on the outside and soft on the inside.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Red Velvet Cupcakes</h3>
+                <img src="https://www.boskitchen.com/wp-content/uploads/2022/12/redvelvetcupcakes-6.jpg" alt="Red Velvet Cupcakes">
+                <p>Delightful cupcakes with a smooth red velvet texture, topped with cream cheese frosting.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Cinnamon Rolls</h3>
+                <img src="https://cambreabakes.com/wp-content/uploads/2024/03/best-cinnamon-rolls-featured.jpg" alt="Cinnamon Rolls">
+                <p>Soft, gooey rolls filled with cinnamon sugar and topped with creamy icing.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Lemon Tart</h3>
+                <img src="https://www.allrecipes.com/thmb/XAg1MEz9NGzuSdcXrhve4aqbGqE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/kimshupe_easyminilemontartswithshortbreadcrust_horizontal-704d21fe6c174b56b5be0434feb577ad.JPG" alt="Lemon Tart">
+                <p>A zesty lemon filling in a crisp, buttery crust, perfect for a refreshing treat.</p>
+            </div>
+        </section>
+        <section id="contact-us">
+            <h2>Contact Us</h2>
+            <p>Email: sweetreats@gmail.com</p>
+            <p>Phone: 9360001999</p>
+            <p>Address: 123 Bakery street, Foodie Town</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Sweet Treats Bakery. </p>
+    </footer>
+</body>
+</html>
